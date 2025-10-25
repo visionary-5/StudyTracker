@@ -1,5 +1,6 @@
 {
   "src": [
-    "App"
+    "App",
+    "pages/NoteEditorPage"
   ]
 }

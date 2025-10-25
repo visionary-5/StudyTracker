@@ -1,4 +1,3 @@
-// entry/src/main/ets/data/types.ets
 export interface Task {
   id: string
   title: string
@@ -7,7 +6,22 @@ export interface Task {
   done: boolean
   createdAt: number
   dueAt?: number
+  completedAt?: number
   tags?: string[]
+  note?: string // 备注
+}
+
+// 精准定义允许被更新的字段
+export interface TaskPatch {
+  title?: string
+  minutesPlanned?: number
+  minutesDone?: number
+  done?: boolean
+  createdAt?: number
+  dueAt?: number
+  completedAt?: number
+  tags?: string[]
+  note?: string
 }
 
 export interface Session {
@@ -26,3 +40,4 @@ export interface Goal {
   startAt: number
   endAt: number
 }
+
